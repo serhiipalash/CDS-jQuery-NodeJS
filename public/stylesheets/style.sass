@@ -1,0 +1,90 @@
+.customerID
+    margin: 30px
+    padding: 10px 40px
+    border: 1px solid #ffd738
+    border-radius: 6px
+    background-color: #f0fcb0
+    font-size: 175%
+    font-family: serif
+
+
+#helpText
+    margin: 30px
+
+
+table#customers td:not(:first-child)
+    cursor: pointer
+
+
+table#customers th:first-child, td:first-child
+    text-align: center
+    width: 38px
+
+
+#showPanel
+    margin: 30px
+    padding: 10px 40px
+    border: 1px solid black
+    border-radius: 6px
+    background-color: #dccfff
+    font-size: 175%
+    font-family: serif
+
+
+ol
+    counter-reset: li
+    list-style: none
+    *list-style: decimal
+    font: 15px 'trebuchet MS', 'lucida sans'
+    padding: 0
+    margin-bottom: 4em
+
+
+ol ol
+    margin: 0 0 0 2em
+
+
+.rectangle-list a
+    position: relative
+    display: block
+    padding: .4em .4em .4em .8em
+    *padding: .4em
+    margin: .5em 0 .5em 2.5em
+    background: #ddd
+    color: #100
+    text-decoration: none
+    transition: all .3s ease-out
+
+
+.rectangle-list a:hover
+    background: #eee
+
+
+.rectangle-list a:before
+    content: counter(li)
+    counter-increment: li
+    position: absolute
+    left: -2.5em
+    top: 50%
+    margin-top: -1em
+    background: #6900ff
+    height: 2em
+    width: 2em
+    line-height: 2em
+    text-align: center
+    font-weight: bold
+
+
+.rectangle-list a:after
+    position: absolute
+    content: ''
+    border: .5em solid transparent
+    left: -1em
+    top: 50%
+    margin-top: -.5em
+    transition: all .3s ease-out
+
+
+.rectangle-list a:hover:after
+    left: -.5em
+    border-left-color: #6900ff

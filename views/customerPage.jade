@@ -1,0 +1,31 @@
+extends layout
+
+block content
+
+  #showPanel
+    .row
+      h1.text-center
+        span#firstName #{customer.name.firstName}
+        | 
+        span#lastName #{customer.name.lastName}
+    .row
+      h4 Email: 
+        span#email #{customer.email}
+    .row
+      h4 Telephone: 
+        span#telephone #{customer.telephone}
+    .row
+      h4 Address: 
+        span#street #{customer.address.street}
+        if (customer.address.street!='' && (customer.address.city!='' || customer.address.state!='' || customer.address.zip!=''))
+          | , 
+        span#city #{customer.address.city}
+        if (customer.address.city!='' && (customer.address.state!='' || customer.address.zip!=''))
+          | , 
+        span#state #{customer.address.state}
+        if (customer.address.state!='' && customer.address.zip!='')
+          | , 
+        span#zip #{customer.address.zip}
+    .row
+      h6.text-right id: 
+        span#id #{customer.id}

@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  form.form-group#customerForm
+    h1.h1.text-center#formTitle= name.firstName+' '+name.lastName
+    .row
+      .form-group.col-sm-6
+        label.control-label.hidden-xs( for="firstName" ) First Name
+        input.form-control#firstName( type="text" value=name.firstName required placeholder="First Name" )
+      .form-group.col-sm-6
+        label.control-label.hidden-xs( for="lastName" ) Last Name
+        input.form-control#lastName( type="text" placeholder="Last Name" )
+    .row
+      .form-group.col-sm-6
+        label.control-label.hidden-xs( for="email" ) Email
+        input.form-control#email( type="text" placeholder="Email" )
+      .form-group.col-sm-6
+        label.control-label.hidden-xs( for="telephone" ) Telephone
+        input.form-control#telephone( type="text" placeholder="Telephone" )
+    .row
+      .form-group.col-sm-12
+        label.control-label.hidden-xs( for="street" ) Street
+        input.form-control#street( type="text" placeholder="Street" )
+    .row
+      .form-group.col-sm-4
+        label.control-label.hidden-xs( for="city" ) City
+        input.form-control#city( type="text" placeholder="City" )
+      .form-group.col-sm-4
+        label.control-label.hidden-xs( for="state" ) State
+        input.form-control#state( type="text" placeholder="State" )
+      .form-group.col-sm-4
+        label.control-label.hidden-xs( for="zip" ) ZIP
+        input.form-control#zip( type="text" placeholder="ZIP" )
+    button.btn.btn-primary.btn-block#submit( type="submit" ) OK

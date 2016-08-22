@@ -1,0 +1,39 @@
+doctype html
+html
+head
+    title= title
+
+    meta( charset='utf-8' )
+    meta( name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" )
+
+    //- CSS Libs
+    link( rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" )
+    link( rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" )
+
+    //- Styles
+    link( rel='stylesheet', href='/stylesheets/style.css' )
+
+body.well
+    .row
+        a.btn.btn-info.col-xs-6.col-sm-2.col-sm-offset-2#listButton( href="/customers" role="button" ) LIST
+        button.btn.btn-success.col-xs-6.col-sm-2#createButton CREATE
+        button.btn.btn-warning.col-xs-6.col-sm-2#updateButton UPDATE
+        button.btn.btn-danger.col-xs-6.col-sm-2#deleteButton DELETE
+    .container-fluid.text-center.text-warning#helpText &nbsp
+    #content
+        block content
+
+    //- JS Libs
+    script( src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous" )
+
+    //- JS Utils
+    script( src='/javascripts/utils/parseOb.js' )
+
+    script( src='/javascripts/Customer.js' )
+    script( src='/javascripts/showForm.js' )
+    script( src='/javascripts/createCustomer.js' )
+    script( src='/javascripts/updateCustomer.js' )
+    script( src='/javascripts/deleteCustomer.js' )
+
+    //- App
+    script( src='/javascripts/app.js' )

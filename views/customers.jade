@@ -1,0 +1,8 @@
+extends layout
+
+block content
+
+  ol.rectangle-list
+    each val, index in customerList
+      li
+        a(href="/customers/#{index}")= val
